@@ -11,4 +11,9 @@ export class AboutPage {
 
   }
 
+  feeling: string = "sad";
+
+  searchTerm:string = "";
+
+
 }

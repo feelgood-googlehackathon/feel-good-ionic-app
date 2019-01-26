@@ -1,5 +1,7 @@
 {
   "name": "feel-good-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
