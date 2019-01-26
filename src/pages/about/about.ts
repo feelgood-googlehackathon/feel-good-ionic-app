@@ -15,6 +15,7 @@ export class AboutPage {
 
   searchTerm:string = "";
 
+  memeCardArray: any = [];
 
   memeArray: any = [
     {'embedUrl':"../../assets/imgs/feel-good-black.png"},
@@ -22,11 +23,31 @@ export class AboutPage {
     {'embedUrl':"../../assets/imgs/feel-good-black.png"}
   ];
 
+  ionViewDidLoad() {
+    this.getMemes();
+  }
+
   getMemes() {
     this.sharedService.getMemes().subscribe(response => {
       // this.memeArray = response;
       console.log(response);
     });
+    this.processMemes();
   }
 
+  //create new memeCardObject
+  processMemes () {
+    console.log("iuuigi");
+   this.memeArray.forEach((obj) => {
+     console.log(obj);
+     let memeCardObj = {'embedUrl': obj.embedUrl, "liked": false, "bookmark": false}
+     this.memeCardArray.push(memeCardObj);
+   });
+
+   this.sharedService.setMemeCardObjectsArray(this.memeCardArray);
+  }
+
+  toggle (memeCardObj: any){
+     // memeCardObj['liked'] != true;
+  }
 }

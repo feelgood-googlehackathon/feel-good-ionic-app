@@ -13,11 +13,23 @@ export class SharedServiceProvider {
   constructor(private http: HttpClient) {
   }
 
+  memeCardObjectsArray: any [];
   loggedIn: boolean = false;
 
   //todo: put url in this for memes
   public getMemes(): Observable<any> {
     return this.http.get<any>('');
   }
+
+  setMemeCardObjectsArray (array : any) {
+    console.log("setting", "memeCardObjectsArray");
+    this.memeCardObjectsArray = array;
+  }
+  getMemeCardObjectsArray () : any[] {
+    console.log("getting", "memeCardObjectsArray");
+
+    return this.memeCardObjectsArray;
+  }
+
 
 }
