@@ -8,7 +8,7 @@ import {SharedServiceProvider} from "../../providers/shared-service/shared-servi
 })
 export class HomePage {
 
-  public favourites: any[];
+  public favourites: any[] = [];
 
   constructor(public navCtrl: NavController, private sharedService: SharedServiceProvider) {
   }

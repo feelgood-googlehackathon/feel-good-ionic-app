@@ -19,8 +19,8 @@ export class LoginPage {
     setTimeout(() => {
       this.loaderIsShown = false;//<<<---    using ()=> syntax
       this.navCtrl.push(AboutPage);
-      console.log("hi")
-    }, 9000);
+      console.log("hi");
+    }, 5000);
 
   }
   goToFeed () {

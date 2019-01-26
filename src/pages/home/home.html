@@ -6,24 +6,40 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="global-bg-color">
   <ion-list>
+
+    <!--<ion-grid *ngIf="favourites.length > 0">-->
+      <!--<ion-row>-->
+        <!--<ion-col width-100>-->
+          <!--<ion-list>-->
+            <!--<ion-item>-->
+                <!--<div>-->
+                  <!--<ion-icon name="happy"></ion-icon>-->
+                  <!--No Items in Bookmark <ion-icon name="happy"></ion-icon>-->
+                <!--</div>-->
+
+            <!--</ion-item>-->
+          <!--</ion-list>-->
+        <!--</ion-col>-->
+      <!--</ion-row>-->
+    <!--</ion-grid>-->
+
     <!--<ion-item *ngFor="let card of favourites" >-->
       <!--{{card}}-->
     <!--</ion-item>-->
+<div>
+  <ion-card  *ngFor="let item of favourites">
+    <ion-card-header>
+      <!--<ion-card-subtitle>Card Subtitle</ion-card-subtitle>-->
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+    <img [src]="item.embedUrl" alt="">
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+</div>
 
-    <ion-card  *ngFor="let item of favourites">
-      <ion-card-header>
-        <!--<ion-card-subtitle>Card Subtitle</ion-card-subtitle>-->
-        <ion-card-title>Card Title</ion-card-title>
-      </ion-card-header>
-      <img [src]="item.embedUrl" alt="">
-      <ion-card-content>
-      </ion-card-content>
-
-
-
-    </ion-card>
 
   </ion-list>
 </ion-content>

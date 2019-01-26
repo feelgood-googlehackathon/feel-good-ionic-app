@@ -29,9 +29,9 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="global-bg-color">
  <div *ngIf="!loaderIsShown">
-   <img src="../../assets/imgs/feel-good-black.png" alt="">
+   <img class="animated bounce infinite delay-2s" src="../../assets/imgs/feel-good-white.png" alt="">
    <ion-grid>
      <ion-row>
        <ion-col width-100>
@@ -44,7 +44,7 @@
              <ion-label>Password</ion-label>
              <ion-textarea  name="description"></ion-textarea>
            </ion-item>
-           <button ion-button type="submit" block>Login</button>
+           <button style="background-color: #619CA5" ion-button type="submit" block>Login</button>
          </form>
        </ion-col>
      </ion-row>
