@@ -11,17 +11,37 @@ export class AboutPage {
   constructor(public navCtrl: NavController, private sharedService: SharedServiceProvider) {
   }
 
-  feeling: string = "sad";
+  feeling: string = "ok";
 
   searchTerm:string = "";
 
   memeCardArray: any = [];
 
-  memeArray: any = [
-    {'embedUrl':"../../assets/imgs/feel-good-black.png"},
-    {'embedUrl':"../../assets/imgs/feel-good-black.png"},
-    {'embedUrl':"../../assets/imgs/feel-good-black.png"}
-  ];
+  memeArray: any = [{'embedUrl':'https://media0.giphy.com/media/l2XbJoq24l4NW/giphy.gif'},
+    {'embedUrl':'https://media1.giphy.com/media/3oD3YkwvI51bftIJqM/giphy.gif'},
+    {'embedUrl':'https://media3.giphy.com/media/110gOs75GuUWyY/giphy.gif]'},
+    {'embedUrl':'https://media0.giphy.com/media/qVXWm4kb6rRgA/giphy.gif'},
+    {'embedUrl':'https://media2.giphy.com/media/F1jPC5d5uEpMY/giphy.gif'},
+    {'embedUrl':'https://media1.giphy.com/media/po6VltkCaNCY8/giphy.gif'},
+    {'embedUrl':'https://media0.giphy.com/media/NsEQomAun60km5QYU2/giphy.gif'},
+    {'embedUrl':'https://media2.giphy.com/media/xUA7bgFa2U55vmQzfO/giphy.gif'},
+    {'embedUrl':'https://media0.giphy.com/media/BwTRXeu6bl9Bu/giphy.gif'},
+    {'embedUrl':'https://media0.giphy.com/media/DJ4BBsZNHy6Oc/giphy.gif'},
+    {'embedUrl':'https://media1.giphy.com/media/vYWjvVl7E1YA0/giphy.gif'},
+    {'embedUrl':'https://media3.giphy.com/media/najmtazy4OiiI/giphy.gif'},
+    {'embedUrl':'https://media3.giphy.com/media/xsFjLwT7NPfH2/giphy.gif'},
+    {'embedUrl':'https://media0.giphy.com/media/gecNxHaA7NbCU/giphy.gif'},
+    {'embedUrl':'https://media3.giphy.com/media/6lPxj77sCcdJC/giphy.gif'},
+    {'embedUrl':'https://media3.giphy.com/media/3oAt29sGSwFa016fbW/giphy.gif'},
+    {'embedUrl':'https://media3.giphy.com/media/gdhK6yHuWY1dm/giphy.gif'},
+    {'embedUrl':'https://media0.giphy.com/media/eenSnwDJOkhPjcOBL3/giphy.gif'},
+    {'embedUrl':'https://media2.giphy.com/media/g6Xmo9j6U0IhO/giphy.gif'},
+    {'embedUrl':'https://media0.giphy.com/media/3ohs862MINZz49hhcc/giphy.gif'},
+    {'embedUrl':'https://media3.giphy.com/media/l41YxrkaxDLUQGoCY/giphy.gif'},
+    {'embedUrl':'https://media2.giphy.com/media/3o6ZtrBoYokPJ7Mp2g/giphy.gif'},
+    {'embedUrl':'https://media2.giphy.com/media/aAXXSKOxmmhzO/giphy.gif'},
+    {'embedUrl':'https://media2.giphy.com/media/3o6gEeg80PqeJBtsdy/giphy.gif'},
+    {'embedUrl':'https://media1.giphy.com/media/l0DAGmGPFaoEdeePe/giphy.gif'}];
 
   ionViewDidLoad() {
     this.getMemes();
