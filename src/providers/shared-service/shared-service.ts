@@ -27,19 +27,18 @@ export class SharedServiceProvider {
     console.log("setting", "memeCardObjectsArray");
     this.memeCardObjectsArray = array;
   }
+
   getMemeCardObjectsArray () : any[] {
     console.log("getting", "memeCardObjectsArray");
-
     return this.memeCardObjectsArray;
   }
 
 
-
-  public setStoredFavourites(card: any): void {
-    this.storedFavourites.push(card);
-  };
-
-  public getStoredFavourites(): any[] {
-    return this.storedFavourites;
-  }
+  // public setStoredFavourites(card: any): void {
+  //   this.storedFavourites.push(card);
+  // };
+  //
+  // public getStoredFavourites(): any[] {
+  //   return this.storedFavourites;
+  // }
 }

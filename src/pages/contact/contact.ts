@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {SharedServiceProvider} from "../../providers/shared-service/shared-service";
 
 @Component({
   selector: 'page-contact',
@@ -7,13 +8,13 @@ import { NavController } from 'ionic-angular';
 })
 export class ContactPage {
   public favourites: any[];
-    
+
   constructor(public navCtrl: NavController, private sharedService: SharedServiceProvider) {
   }
 
-  NgOnit() {
-    this.sharedService.getFavorites.subscribe(
-      data => this.favourites);
-  }
- 
+  // ngOnit() {
+  //   this.sharedService.getStoredFavourites().subscribe(
+  //      data => this.favourites);
+  // }
+
 }

@@ -40,14 +40,36 @@ export class AboutPage {
     console.log("iuuigi");
    this.memeArray.forEach((obj) => {
      console.log(obj);
-     let memeCardObj = {'embedUrl': obj.embedUrl, "liked": false, "bookmark": false}
+     let memeCardObj = {'embedUrl': obj.embedUrl, "liked": false, "bookmark": false};
      this.memeCardArray.push(memeCardObj);
    });
 
    this.sharedService.setMemeCardObjectsArray(this.memeCardArray);
   }
 
-  toggle (memeCardObj: any){
-     // memeCardObj['liked'] != true;
+  toggleLike (memeCardObj: any){
+    // console.log(memeCardObj);
+    if (memeCardObj['liked'] === true) {
+      memeCardObj['liked'] = false;
+      //remove from faves
+
+    }else {
+      memeCardObj['liked'] = true;
+      //add to faves
+    }
+    console.log(memeCardObj);
+
+  }
+
+  toggleBookmark (memeCardObj: any){
+    // if (memeCardObj['bookmarked'] === true) {
+    //   memeCardObj['bookmarked'] = false;
+    //   //remove from bookmarks
+    //
+    // }else {
+    //   memeCardObj['bookmarked'] = true;
+    //   //add to bookmarks
+    // }
+    // console.log(memeCardObj);
   }
 }
