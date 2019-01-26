@@ -8,12 +8,11 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-card  *ngFor="let item of memeCardArray">
+    <ion-card  *ngFor="let item of quotes">
       <ion-card-header>
         <!--<ion-card-subtitle>Card Subtitle</ion-card-subtitle>-->
-        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-title>{{item.from}}</ion-card-title>
       </ion-card-header>
-      <img [src]="item.embedUrl" alt="">
       <ion-card-content>
         <div>
           <br>
@@ -22,9 +21,6 @@
             <ion-icon  *ngIf="!item.liked" (click)="toggleLike(item)" name="star-outline"></ion-icon>
             <ion-icon *ngIf="item.liked" (click)="toggleLike(item)" name="star"></ion-icon>
           </span>
-          <!--<span class="bottom-buttons" style="color: dodgerblue;float: left">-->
-            <!--<ion-icon (click)="toggleBookmark(item)" name="bookmark"></ion-icon>-->
-        <!--</span>-->
         </div>
       </ion-card-content>
 
