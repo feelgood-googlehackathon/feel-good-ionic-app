@@ -55,7 +55,7 @@ export class AboutPage {
 
     }else {
       memeCardObj['liked'] = true;
-      this.sharedService.setStoredFavourites(memeCardObj);
+      this.sharedService.setStoredFavouritesMeme(memeCardObj);
       //add to faves
     }
     console.log(memeCardObj);

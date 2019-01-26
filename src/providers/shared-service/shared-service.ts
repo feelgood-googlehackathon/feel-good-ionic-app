@@ -10,12 +10,16 @@ import {HttpClient} from "@angular/common/http";
 @Injectable()
 export class SharedServiceProvider {
 
-  public storedFavourites: any[] = [];
+  public storedFavouritesMeme: any[] = [];
+  public storedFavouritesQuote: any[] = [];
+
 
   constructor(private http: HttpClient) {
   }
 
   memeCardObjectsArray: any [];
+  quoteCardObjectsArray: any [];
+
   loggedIn: boolean = false;
 
   //todo: put url in this for memes
@@ -34,11 +38,29 @@ export class SharedServiceProvider {
   }
 
 
-  public setStoredFavourites(card: any): void {
-    this.storedFavourites.push(card);
+  public setStoredFavouritesMeme(card: any): void {
+    this.storedFavouritesMeme.push(card);
   };
 
-  public getStoredFavourites(): any[] {
-    return this.storedFavourites;
+  public getStoredFavouritesMeme(): any[] {
+    return this.storedFavouritesMeme;
+  };
+
+  public setStoredFavouritesQuote(card: any): void {
+    this.storedFavouritesQuote.push(card);
+  }
+  public getStoredFavouriteQuote(): any[] {
+    return this.storedFavouritesQuote;
+  }
+
+
+  setQuoteCardObjectsArray (array : any) {
+    console.log("getting", "quoteCardObjectsArray");
+    this.quoteCardObjectsArray = array;
+  }
+
+  getQuoteCardObjectsArray () : any[] {
+    console.log("getting", "quoteCardObjectsArray");
+    return this.quoteCardObjectsArray;
   }
 }

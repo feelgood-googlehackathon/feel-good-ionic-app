@@ -9,12 +9,15 @@ import {SharedServiceProvider} from "../../providers/shared-service/shared-servi
 export class HomePage {
 
   public favourites: any[] = [];
+  public faveQuotes: any[] = [];
 
   constructor(public navCtrl: NavController, private sharedService: SharedServiceProvider) {
   }
 
   ionViewDidLoad() {
     console.log("hi from contact");
-    this.favourites = this.sharedService.getStoredFavourites();
+    this.favourites = this.sharedService.getStoredFavouritesMeme();
+    this.faveQuotes = this.sharedService.getStoredFavouriteQuote();
+
   }
 }

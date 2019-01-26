@@ -6,11 +6,28 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="global-bg-color">
+
+<ion-content padding class="global-bg-color">
   <ion-list>
-    <!--<ion-list-header>Follow us on Twitter</ion-list-header>-->
-    <ion-item *ngFor="let card of favourites" >
-      {{card}}
-    </ion-item>
+    <ion-card  *ngFor="let item of quotes">
+      <ion-card-header>
+        <!--<ion-card-subtitle>Card Subtitle</ion-card-subtitle>-->
+        <!--<ion-card-title>Card Title</ion-card-title>-->
+      </ion-card-header>
+      <ion-card-content>
+        <div>
+
+          {{item.text}}
+          <br>
+          <hr>
+          <span  class="bottom-buttons" style="color: gold; float: right">
+            <ion-icon  *ngIf="!item.liked" (click)="toggleLike(item)" name="star-outline"></ion-icon>
+            <ion-icon *ngIf="item.liked" (click)="toggleLike(item)" name="star"></ion-icon>
+          </span>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
   </ion-list>
+
 </ion-content>
