@@ -8,12 +8,17 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class SharedServiceProvider {
 
-  constructor() {
-    console.log('Hello SharedServiceProvider Provider');
+  constructor(private http: HttpClient) {
   }
 
   loggedIn: boolean = false;
 
-  currentUserData: any = {carerID: '1'};
-
-}
+  //todo: put url in this for memes
+  public getMemes(): Observable<Any>{
+    return this.http.get<Any>('');
+  }
+  
+   //todo: put url in this for memes
+  public getQuotes(): Observable<Any>{
+    return this.http.get<Any>('');
+  }
