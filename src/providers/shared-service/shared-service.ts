@@ -16,6 +16,8 @@ export class SharedServiceProvider {
   }
 
   memeCardObjectsArray: any [];
+  quoteCardObjectsArray: any [];
+
   loggedIn: boolean = false;
 
   //todo: put url in this for memes
@@ -40,5 +42,15 @@ export class SharedServiceProvider {
 
   public getStoredFavourites(): any[] {
     return this.storedFavourites;
+  }
+
+  setQuoteCardObjectsArray (array : any) {
+    console.log("getting", "quoteCardObjectsArray");
+    this.quoteCardObjectsArray = array;
+  }
+
+  getQuoteCardObjectsArray () : any[] {
+    console.log("getting", "quoteCardObjectsArray");
+    return this.quoteCardObjectsArray;
   }
 }
