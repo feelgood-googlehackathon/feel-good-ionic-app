@@ -6,9 +6,14 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'contact.html'
 })
 export class ContactPage {
-
-  constructor(public navCtrl: NavController) {
-
+  public favourites: any[];
+    
+  constructor(public navCtrl: NavController, private sharedService: SharedServiceProvider) {
   }
 
+  NgOnit() {
+    this.sharedService.getFavorites.subscribe(
+      data => this.favourites);
+  }
+ 
 }
