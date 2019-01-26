@@ -14,11 +14,11 @@ export class ContactPage {
 
   ionViewDidLoad() {
     // console.log("hi from quotes");
-    this.quotes = this.sharedService.getQuotes();
+    this.quotes = data;
   }
   
   processQuotes() {
-    this.data.forEach((obj) => {
+    this.quotes.forEach((obj) => {
       let quoteCardObj = {'text' : obj.text, "liked": false, "bookmark":false};
       this.quotes.push(quoteCardObj);
     });
