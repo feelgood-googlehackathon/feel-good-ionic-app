@@ -1,16 +1,65 @@
 <ion-header>
+
   <ion-navbar>
+
     <ion-title>
-      Contact
+
+      Quotes
+
     </ion-title>
+
   </ion-navbar>
+
 </ion-header>
 
-<ion-content>
+
+
+<ion-content padding>
+
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item *ngFor="let card of favourites" >
-      {{card}}
-    </ion-item>
+
+    <ion-card  *ngFor="let item of quotes">
+
+      <ion-card-header>
+
+        <!--<ion-card-subtitle>Card Subtitle</ion-card-subtitle>-->
+
+        <ion-card-title>{{item.from}}</ion-card-title>
+
+      </ion-card-header>
+
+      <ion-card-content>
+
+        <div>
+
+          <br>
+
+          <hr>
+
+          <span  class="bottom-buttons" style="color: gold; float: right">
+
+            <ion-icon  *ngIf="!item.liked" (click)="toggleLike(item)" name="star-outline"></ion-icon>
+
+            <ion-icon *ngIf="item.liked" (click)="toggleLike(item)" name="star"></ion-icon>
+
+          </span>
+
+        </div>
+
+      </ion-card-content>
+
+
+
+
+
+
+
+    </ion-card>
+
+
+
   </ion-list>
+
+
+
 </ion-content>
