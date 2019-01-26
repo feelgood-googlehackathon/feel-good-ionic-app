@@ -1,9 +1,29 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>
+      Bookmarks
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h1>Feel Good</h1>
+<ion-content>
+  <ion-list>
+    <!--<ion-item *ngFor="let card of favourites" >-->
+      <!--{{card}}-->
+    <!--</ion-item>-->
+
+    <ion-card  *ngFor="let item of favourites">
+      <ion-card-header>
+        <!--<ion-card-subtitle>Card Subtitle</ion-card-subtitle>-->
+        <ion-card-title>Card Title</ion-card-title>
+      </ion-card-header>
+      <img [src]="item.embedUrl" alt="">
+      <ion-card-content>
+      </ion-card-content>
+
+
+
+    </ion-card>
+
+  </ion-list>
 </ion-content>

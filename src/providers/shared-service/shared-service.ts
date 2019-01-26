@@ -10,7 +10,7 @@ import {HttpClient} from "@angular/common/http";
 @Injectable()
 export class SharedServiceProvider {
 
-  public storedFavourites: any[];
+  public storedFavourites: any[] = [];
 
   constructor(private http: HttpClient) {
   }
@@ -34,11 +34,11 @@ export class SharedServiceProvider {
   }
 
 
-  // public setStoredFavourites(card: any): void {
-  //   this.storedFavourites.push(card);
-  // };
-  //
-  // public getStoredFavourites(): any[] {
-  //   return this.storedFavourites;
-  // }
+  public setStoredFavourites(card: any): void {
+    this.storedFavourites.push(card);
+  };
+
+  public getStoredFavourites(): any[] {
+    return this.storedFavourites;
+  }
 }

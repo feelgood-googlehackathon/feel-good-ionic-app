@@ -12,9 +12,9 @@ export class ContactPage {
   constructor(public navCtrl: NavController, private sharedService: SharedServiceProvider) {
   }
 
-  // ngOnit() {
-  //   this.sharedService.getStoredFavourites().subscribe(
-  //      data => this.favourites);
-  // }
+  ionViewDidLoad() {
+    // console.log("hi from quotes");
+    // this.favourites = this.sharedService.getQuotes();
+  }
 
 }
