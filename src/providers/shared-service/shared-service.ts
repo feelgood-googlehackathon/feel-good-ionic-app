@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import {Observable} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 /*
   Generated class for the SharedServiceProvider provider.
 
@@ -14,11 +16,8 @@ export class SharedServiceProvider {
   loggedIn: boolean = false;
 
   //todo: put url in this for memes
-  public getMemes(): Observable<Any>{
-    return this.http.get<Any>('');
+  public getMemes(): Observable<any> {
+    return this.http.get<any>('');
   }
-  
-   //todo: put url in this for memes
-  public getQuotes(): Observable<Any>{
-    return this.http.get<Any>('');
-  }
+
+}

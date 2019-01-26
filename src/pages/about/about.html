@@ -8,10 +8,18 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-list-header>{{feeling}}</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
+    <ion-card  *ngFor="let item of memeArray">
+      <ion-card-header>
+        <!--<ion-card-subtitle>Card Subtitle</ion-card-subtitle>-->
+        <ion-card-title>Card Title</ion-card-title>
+      </ion-card-header>
+      <img [src]="item.embedUrl" alt="">
+      <ion-card-content>
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      </ion-card-content>
+    </ion-card>
+
   </ion-list>
+
 </ion-content>
